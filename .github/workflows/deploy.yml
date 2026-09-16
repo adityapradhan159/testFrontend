@@ -1,6 +1,14 @@
 name: Deploy AY website
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select the environment"
+        required: true
+        type: choice
+        options:
+          - dev
   push:
     branches:
       - main 
